@@ -1,0 +1,31 @@
+Rubrics for Node.js Application Debugging Lab:
+
+Criteria                  | Excellent (5)         | Good (3)             | Fair (1)              | Poor (0)                | 
+--------------------------|-----------------------|----------------------|-----------------------|---------------------    |
+Terminal Debugging        | Student effectively   | Student uses          | Student attempts to    | Student does not use  |
+                          | uses Node.js debugging| console.log           | debug using            | any form of debugging |
+                          | flags and demonstrates| statements for basic  | console.log, but with  | techniques            |
+                          | proficiency in        | debugging purposes    | limited effectiveness  |                       |
+                          | debugging through the |                       |                        |                       |
+                          | terminal              |                       |                        |                       |
+--------------------------|-----------------------|---------------------- |----------------------- |---------------------- |
+VS Code Debugging         | Student creates a     | Student sets          | Student attempts to    | Student does not      |
+                          | comprehensive launch  | breakpoints and       | utilize VS Code        | utilize VS Code       |
+                          | configuration for      | steps through code   | debugging tools, but   | debugging tools or    |
+                          | Node.js application   | using the debugging   | with limited           | launch configuration  |
+                          | in VS Code            | controls              | effectiveness          |                       |
+--------------------------|-----------------------|-----------------------|------------------------|---------------------- |
+Debugging HTTP Requests   | Student effectively   | Student sets          | Student attempts to    | Student does not      |
+(GET and POST)            | sets breakpoints in   | breakpoints and       | debug HTTP requests,   | debug HTTP requests   |
+                          | the route handler     | inspects variables    | but with limited       | or lacks              |
+                          | functions for both GET| during HTTP request   | effectiveness          | understanding of      |
+                          | and POST requests     | handling              |                        | the debugging         |
+                          |                       |                       |                        | process               |
+--------------------------|-----------------------|---------------------- |-----------------------|----------------------  |
+Overall Understanding     | Student demonstrates  | Student displays a    | Student shows some     | Student lacks         |
+                          | a thorough understanding | reasonable         | understanding, but     | understanding of      |
+                          | of Node.js application | understanding of     | with gaps in           | the debugging         |
+                          | debugging techniques  | Node.js application   | knowledge              | concepts              |
+--------------------------|-----------------------|-----------------------|------------------------|-----------------------|
+
+Note: The above rubrics provide a general framework for assessing the student's performance in a Node.js Application Debugging Lab. The criteria and weightage can be adjusted as per specific requirements and learning objectives.

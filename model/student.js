@@ -23,34 +23,38 @@ const studentSchema = new Schema({
     email: {
         type: String,
         validate: {
-            validator: emailValidator,
+            validator: function(v) {
+                return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
+            },
             message: props => `${props.value} is not a valid email`
         },
         required: [true, 'User email required']
     },
     courses: [courseSchema]
-})
-
-emailValidator = function(v) {
-    return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
-}
-
+});
 
 const Student = mongoose.model('Student', studentSchema);
 
+// ------- INVALID Student model -------
+// let student = new Student({
+//     name: 'John',
+//     age: 20,
+//     email: 'notAValidEmail',
+//     courses: [{ name: 'Math', grade: 105 }]
+// });
+
+// Valid Student model
 let student = new Student({
     name: 'John',
     age: 20,
-    email: 'notAValidEmail',
-    courses: [{ name: 'Math', grade: 105 }]
+    email: 'validemail@asu.edu',
+    courses: [{ name: 'Math', grade: 90 }]
 });
 
-student.save((err, student) => {
-    if (err) {
-        return console.error(err);
-    } else {
-        console.log('Student with course information saved to database: ', student);
-    }
+student.save().then(function (student) {
+    console.log('Student with course information saved to database: ', student);
+}).catch(function (err) {
+    return console.error(err);
 });
 
 module.exports = Student;

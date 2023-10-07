@@ -2,7 +2,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const mongoose = require('mongoose');
 
 // Create an instance of express
 const app = express();
@@ -22,7 +21,4 @@ console.log('views', path.join(__dirname, 'views'));
 const studentsRouter = require('./routes/studentsRoutes');
 app.use('/students', studentsRouter);
 
-// Start the server on port 3000
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+module.exports = app;
